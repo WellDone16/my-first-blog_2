@@ -1,0 +1,15 @@
+{%extends "basic.html"%}
+
+{% block title %}
+Статьи
+{% endblock %}
+
+{%block content%}
+  {%for post in object_list%}
+    <a href="/news/{{post.id}}"><h3>{{post.title}}</h3></a>
+    <h5>{{post.date|date:"d-m-Y"}}</h5>
+    <div class="alert alert-primary" role="alert">
+        Это основное уведомление — check it out!
+    </div>
+  {%endfor%}
+{%endblock%}
